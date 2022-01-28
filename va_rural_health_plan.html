@@ -2623,15 +2623,17 @@ window.FlexDashboardComponents.push({
 <div id="dashboard-container">
 
 <style>
-
 body {
   padding-top:0px
 }
-
 .navbar{
   visibility: hidden
 }
-
+.view_button{
+  font-size: 0.875em;
+  display: block;
+  width: 100%;
+}
 </style>
 <div id="column" class="section level2 tabset" data-width="200,">
 <h2 class="tabset">Column</h2>
@@ -2649,51 +2651,51 @@ function myFunction(src) {
 </script>
 <div id="education" class="section level5">
 <h5>Education</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2019&amp;min_year=2019&amp;selected_variable=3rd_grade_median_read_score:median_read_pass_rate&amp;variable_type=Education&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
+<button type="button" class="view_button" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2019&amp;min_year=2019&amp;selected_variable=3rd_grade_median_read_score:median_read_pass_rate&amp;variable_type=Education&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
 Child Readiness via Third Grade Standards of Learning Reading Assessment
 </button>
 </div>
 <div id="broadband" class="section level5">
 <h5>Broadband</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2019&amp;selected_year=2019&amp;min_year=2017&amp;selected_variable=pct_pop_broadband:perc_w_broadband&amp;variable_type=Broadband&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
+<button type="button" class="view_button" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2019&amp;selected_year=2019&amp;min_year=2017&amp;selected_variable=pct_pop_broadband:perc_w_broadband&amp;variable_type=Broadband&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
 Percentage of Households with Broadband
 </button>
 </div>
 <div id="nutrition-and-food-security" class="section level5">
 <h5>Nutrition and Food Security</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Rates of Food Security
 </button>
 <hr />
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Rates of Food Insecurity among Households with Children
 </button>
 </div>
 <div id="healthy-moms-and-babies" class="section level5">
 <h5>Healthy Moms and Babies</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Adequacy of Prenatal Care Utilization via Kotelchuck Index
 </button>
 </div>
 <div id="access-to-health-care-services" class="section level5">
 <h5>Access to Health Care Services</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
+<button type="button" class="view_button" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
 Rates of Avoidable Hospitalizations per 100,000 Residents
 </button>
 </div>
 <div id="behavioral-health-substance-use-disorder-and-recovery" class="section level5">
 <h5>Behavioral Health, Substance Use Disorder and Recovery</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Rates of Emergency Department Visits for Overdose (All drugs)
 </button>
 </div>
 <div id="employmentworkforce-development" class="section level5">
 <h5>Employment/Workforce Development</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Earnings/Income per Job
 </button>
 <hr />
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Employment Rates per Census Tract
 </button>
 </div>
