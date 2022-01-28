@@ -1,16 +1,22 @@
 ---
-title: "Untitled"
+title: "Virginia Department of Health Data Commons"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    logo: icon.svg
 ---
 <style>
 body {
-  padding-top:0px
+  padding-top:50px
 }
 .navbar{
-  visibility: hidden
+  visibility: visible;
+  background-color: rgb(20, 30, 60);
+  width: 1600px;
+}
+.navbar-logo.pull-left {
+  padding-top:8px;
 }
 .view_button{
   font-size: 0.875em;
@@ -24,12 +30,13 @@ body {
 library(flexdashboard)
 ```
 
-Column {data-width=200, .tabset}
+Column {data-width=200, .sidebar}
 -----------------------------------------------------------------------
-<b>Data Views</b>
 
-### Rural Health
-<b>Virginia State Office of Rural Health Priority Metrics</b>
+<center>
+<h4>Virginia State Office of Rural Health<br /> -- Priority Metrics --</h4>
+<hr />
+</center>
 
 ```{js, class.source = "jsvis1"}
 function myFunction(src) { 
@@ -63,16 +70,9 @@ function myFunction(src) {
 <button type="button" class="view_button" onclick="myFunction('')" disabled>Employment Rates per Census Tract</button>
 
 
-### PCNA
-
-<button type="button" class="view_button" onclick="myFunction()">Something Else</button>
-
-### HOI
-
-<button type="button" class="view_button" onclick="myFunction()">Something Else</button>
-
 Column {data-width=1400}
 -----------------------------------------------------------------------
 
-<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&selected_district=4&plot_type=scatter" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1"></iframe>
+<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&selected_district=4&plot_type=scatter" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px"></iframe>
 
+ 

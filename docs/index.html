@@ -8,9 +8,9 @@
 
 
 
-<title>Untitled</title>
+<title>Virginia Department of Health Data Commons</title>
 
-<meta property="og:title" content="Untitled" />
+<meta property="og:title" content="Virginia Department of Health Data Commons" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -812,10 +812,10 @@ html, body {
 </button>
 
 <span class="navbar-logo pull-left">
-  
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAyOCAyNCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI0Ij48c3R5bGU+LnN0MHtmaWxsOiNlNTNhMzR9LnN0MXtmaWxsOiNkMjJlMmV9PC9zdHlsZT48ZyBpZD0iTGF5ZXJfMyI+PHBhdGggY2xhc3M9InN0MCIgZD0iTTAgMjRoOHYtOHpNMTYgMjRsOC04di00aDRMMTYgMHY4bC04IDggOCA4eiIvPjwvZz48ZyBpZD0iTGF5ZXJfMiI+PHBhdGggY2xhc3M9InN0MSIgZD0iTTAgMjRsOC04djh6Ii8+PHBhdGggZmlsbD0iI2M1MjcyOCIgZD0iTTggMTZoOHY4eiIvPjxwYXRoIGZpbGw9IiNiNjIwMjUiIGQ9Ik0xNiAxNnY4bDgtOHoiLz48cGF0aCBmaWxsPSIjMjEyMTIwIiBkPSJNMTYgOGg4djh6Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTE2IDh2OGg4eiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNiAwdjhoOHoiLz48cGF0aCBmaWxsPSIjZDIyZDJkIiBkPSJNMjQgOHY0aDR6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTggMTZoOFY4eiIvPjwvZz48L3N2Zz4=" class="navbar-logo" />
 </span>
 <span class="navbar-brand">
-  Untitled
+  Virginia Department of Health Data Commons
   <span class="navbar-author">
         </span>
 </span>
@@ -2623,22 +2623,31 @@ window.FlexDashboardComponents.push({
 <div id="dashboard-container">
 
 <style>
-
 body {
-  padding-top:0px
+  padding-top:50px
 }
-
 .navbar{
-  visibility: hidden
+  visibility: visible;
+  background-color: rgb(20, 30, 60);
+  width: 1600px;
 }
-
+.navbar-logo.pull-left {
+  padding-top:8px;
+}
+.view_button{
+  font-size: 0.875em;
+  display: block;
+  width: 100%;
+}
 </style>
-<div id="column" class="section level2 tabset" data-width="200,">
-<h2 class="tabset">Column</h2>
-<p><b>Data Views</b></p>
-<div id="rural-health" class="section level3">
-<h3>Rural Health</h3>
-<p><b>Virginia State Office of Rural Health Priority Metrics</b></p>
+<div id="column" class="section level2 sidebar" data-width="200,">
+<h2 class="sidebar">Column</h2>
+<center>
+<h4>
+Virginia State Office of Rural Health<br /> – Priority Metrics –
+</h4>
+<hr />
+</center>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
@@ -2649,71 +2658,58 @@ function myFunction(src) {
 </script>
 <div id="education" class="section level5">
 <h5>Education</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2019&amp;min_year=2019&amp;selected_variable=3rd_grade_median_read_score:median_read_pass_rate&amp;variable_type=Education&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
+<button type="button" class="view_button" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2019&amp;min_year=2019&amp;selected_variable=3rd_grade_median_read_score:median_read_pass_rate&amp;variable_type=Education&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
 Child Readiness via Third Grade Standards of Learning Reading Assessment
 </button>
 </div>
 <div id="broadband" class="section level5">
 <h5>Broadband</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2019&amp;selected_year=2019&amp;min_year=2017&amp;selected_variable=pct_pop_broadband:perc_w_broadband&amp;variable_type=Broadband&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
+<button type="button" class="view_button" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2019&amp;selected_year=2019&amp;min_year=2017&amp;selected_variable=pct_pop_broadband:perc_w_broadband&amp;variable_type=Broadband&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
 Percentage of Households with Broadband
 </button>
 </div>
 <div id="nutrition-and-food-security" class="section level5">
 <h5>Nutrition and Food Security</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Rates of Food Security
 </button>
 <hr />
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Rates of Food Insecurity among Households with Children
 </button>
 </div>
 <div id="healthy-moms-and-babies" class="section level5">
 <h5>Healthy Moms and Babies</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Adequacy of Prenatal Care Utilization via Kotelchuck Index
 </button>
 </div>
 <div id="access-to-health-care-services" class="section level5">
 <h5>Access to Health Care Services</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
+<button type="button" class="view_button" onclick="myFunction(&#39;https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&#39;)">
 Rates of Avoidable Hospitalizations per 100,000 Residents
 </button>
 </div>
 <div id="behavioral-health-substance-use-disorder-and-recovery" class="section level5">
 <h5>Behavioral Health, Substance Use Disorder and Recovery</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Rates of Emergency Department Visits for Overdose (All drugs)
 </button>
 </div>
 <div id="employmentworkforce-development" class="section level5">
 <h5>Employment/Workforce Development</h5>
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Earnings/Income per Job
 </button>
 <hr />
-<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction(&#39;&#39;)" disabled>
+<button type="button" class="view_button" onclick="myFunction(&#39;&#39;)" disabled>
 Employment Rates per Census Tract
-</button>
-</div>
-</div>
-<div id="pcna" class="section level3">
-<h3>PCNA</h3>
-<button type="button" onclick="myFunction()">
-Something Else
-</button>
-</div>
-<div id="hoi" class="section level3">
-<h3>HOI</h3>
-<button type="button" onclick="myFunction()">
-Something Else
 </button>
 </div>
 </div>
 <div id="column-1" class="section level2" data-width="1400">
 <h2>Column</h2>
-<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;selected_district=4&amp;plot_type=scatter" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1">
+<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;selected_district=4&amp;plot_type=scatter" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px">
 </iframe>
 </div>
 
