@@ -1,0 +1,79 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+<style>
+
+body {
+  padding-top:0px
+}
+
+.navbar{
+  visibility: hidden
+}
+
+</style>
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=200, .tabset}
+-----------------------------------------------------------------------
+<b>Data Views</b>
+
+### Rural Health
+<b>Virginia State Office of Rural Health Priority Metrics</b>
+
+```{js, class.source = "jsvis1"}
+function myFunction(src) { 
+    document.getElementById("frame").src = src;
+}
+```
+
+##### Education
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2019&min_year=2019&selected_variable=3rd_grade_median_read_score:median_read_pass_rate&variable_type=Education&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Child Readiness via Third Grade Standards of Learning Reading Assessment</button> 
+
+##### Broadband
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2017&selected_variable=pct_pop_broadband:perc_w_broadband&variable_type=Broadband&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Percentage of Households with Broadband</button>
+
+##### Nutrition and Food Security
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('')" disabled>Rates of Food Security</button>
+<hr />
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('')" disabled>Rates of Food Insecurity among Households with Children</button>
+
+##### Healthy Moms and Babies
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('')" disabled>Adequacy of Prenatal Care Utilization via Kotelchuck Index</button>
+
+##### Access to Health Care Services
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Rates of Avoidable Hospitalizations per 100,000 Residents</button>
+
+##### Behavioral Health, Substance Use Disorder and Recovery
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('')" disabled>Rates of Emergency Department Visits for Overdose (All drugs)</button>
+
+##### Employment/Workforce Development
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('')" disabled>Earnings/Income per Job</button>
+<hr />
+<button type="button" style="font-size: 0.875em; display: block; width: 100%;" onclick="myFunction('')" disabled>Employment Rates per Census Tract</button>
+
+
+### PCNA
+
+<button type="button" onclick="myFunction()">Something Else</button>
+
+### HOI
+
+<button type="button" onclick="myFunction()">Something Else</button>
+
+Column {data-width=1400}
+-----------------------------------------------------------------------
+
+<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&selected_district=4&plot_type=scatter" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1"></iframe>
+
+
+
+
