@@ -8,11 +8,11 @@ output:
 ---
 <style>
 body {
-  padding-top:50px
+  padding-top:49px;
 }
 .navbar{
-  visibility: visible;
   background-color: rgb(20, 30, 60);
+  border: 0px, 0px, 0px, 0px,;
   width: 1600px;
 }
 .navbar-logo.pull-left {
@@ -23,6 +23,9 @@ body {
   display: block;
   width: 100%;
 }
+.section.sidebar {
+  background-color: white;
+}
 </style>
 
 
@@ -30,11 +33,12 @@ body {
 library(flexdashboard)
 ```
 
+
+
 Column {data-width=200, .sidebar}
 -----------------------------------------------------------------------
-
 <center>
-<h4>Virginia State Office of Rural Health<br /> -- Priority Metrics --</h4>
+<h4>Virginia State Office of Rural Health<br /><img src="rural_hlth_pln_logo.png" align="top" style="max-width:25px;"><br /> -- Priority Metrics --</h4>
 <hr />
 </center>
 
@@ -45,34 +49,34 @@ function myFunction(src) {
 ```
 
 ##### Education
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2019&min_year=2019&selected_variable=3rd_grade_median_read_score:median_read_pass_rate&variable_type=Education&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Child Readiness via Third Grade Standards of Learning Reading Assessment</button> 
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2019&min_year=2019&selected_variable=3rd_grade_median_read_score:median_read_pass_rate&variable_type=Education&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Child Readiness via Third Grade Standards of Learning Reading Assessment</button> 
 
 ##### Broadband
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2017&selected_variable=pct_pop_broadband:perc_w_broadband&variable_type=Broadband&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Percentage of Households with Broadband</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2017&selected_variable=pct_pop_broadband:perc_w_broadband&variable_type=Broadband&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Percentage of Households with Broadband</button>
 
 ##### Nutrition and Food Security
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2010&selected_variable=food_insecurity_and_cost:Food_Insecurity_Rate&variable_type=Nutrition%20and%20Food%20Security&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Rates of Food Security</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2010&selected_variable=food_insecurity_and_cost:Food_Insecurity_Rate&variable_type=Nutrition%20and%20Food%20Security&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Rates of Food Security</button>
 <hr />
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2010&selected_variable=food_insecurity_and_cost:Child_Food_Insecurity_Rate&variable_type=Nutrition%20and%20Food%20Security&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Rates of Food Insecurity among Households with Children</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2010&selected_variable=food_insecurity_and_cost:Child_Food_Insecurity_Rate&variable_type=Nutrition%20and%20Food%20Security&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Rates of Food Insecurity among Households with Children</button>
 
 ##### Healthy Moms and Babies
 <button type="button" class="view_button" onclick="myFunction('')" disabled>Adequacy of Prenatal Care Utilization via Kotelchuck Index</button>
 
 ##### Access to Health Care Services
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Rates of Avoidable Hospitalizations per 100,000 Residents</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Rates of Avoidable Hospitalizations per 100,000 Residents</button>
 
 ##### Behavioral Health, Substance Use Disorder and Recovery
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2019&min_year=2015&selected_variable=drug_overdose_ed_visits:avg_overdose_per_100k&variable_type=Behavioral%20Health,%20Substance%20Use%20Disorder%20and%20Recovery&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Rates of Emergency Department Visits for Overdose (All drugs)</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2019&min_year=2015&selected_variable=drug_overdose_ed_visits:avg_overdose_per_100k&variable_type=Behavioral%20Health,%20Substance%20Use%20Disorder%20and%20Recovery&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Rates of Emergency Department Visits for Overdose (All drugs)</button>
 
 ##### Employment/Workforce Development
-<button type="button" class="view_button" onclick="myFunction('')" disabled>Earnings/Income per Job</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2020&selected_year=2019&min_year=2015&selected_variable=earnings_per_job:earnings_per_job&variable_type=Employment/Workforce%20Development&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&navcolor=%23555&hide_title=true&hide_logo=true&navcolor=#789b4a')">Earnings/Income per Job</button>
 <hr />
-<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2019&selected_variable=civilian_employment_rate:employment_rate&variable_type=Employment/Workforce%20Development&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter')">Employment Rates per Census Tract</button>
+<button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2019&selected_variable=civilian_employment_rate:employment_rate&variable_type=Employment/Workforce%20Development&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Employment Rate</button>
 
 
 Column {data-width=1400}
 -----------------------------------------------------------------------
 
-<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&selected_district=4&plot_type=scatter" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px"></iframe>
+<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px"></iframe>
 
  
