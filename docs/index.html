@@ -2656,6 +2656,10 @@ Virginia State Office of Rural Health<br /><img src="data:image/png;base64,iVBOR
 </div>
 <script type="text/javascript">
 function myFunction(src) { 
+    if (selected_county != "") {
+      src = src + '&' + selected_county;
+    }
+    console.log(src);
     document.getElementById("frame").src = src;
 }
 </script>
@@ -2663,7 +2667,19 @@ function myFunction(src) {
 
 </div>
 <script type="text/javascript">
-window.top.postMessage('reply', '*')
+var selected_county = "";
+
+window.onmessage = function(event){
+    var data = event.data;
+    selected_county = extractCounty(data);
+    console.log(selected_county);
+}
+
+function extractCounty(text) {
+  var rx = /selected_county=[0-9]{5}/g;
+  var arr = rx.exec(text);
+  return arr ? arr[0] : ''; 
+}
 </script>
 <div id="education" class="section level5">
 <h5>Education</h5>
@@ -2721,9 +2737,12 @@ Employment Rate
 </div>
 <div id="column-1" class="section level2" data-width="1400">
 <h2>Column</h2>
-<!-- <button type="button" class="view_button" onclick='alert(document.getElementById("frame").contentWindow.location.href)'>click</button> -->
-<iframe id="frame" referrerpolicy="origin-when-cross-origin" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&amp;hide_title=true&amp;hide_logo=true&amp;navcolor=%23789b4a" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px">
+<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&amp;selected_year=2021&amp;min_year=2015&amp;selected_variable=preventable_hospitalizations:prevent_hosp_rate&amp;variable_type=Health&amp;region_type=urban,mixed,rural&amp;starting_shapes=county&amp;plot_type=scatter&amp;hide_title=true&amp;hide_logo=true&amp;navcolor=%23789b4a" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px">
 </iframe>
+<hr />
+<script>document.write(document.getElementById("frame"))</script>
+<script>document.write(document.getElementById("frame").contentWindow.location.href)</script>
+<!-- <button type="button" class="view_button" onclick='alert(document.getElementById("frame").[0].contentWindow.location.search)'>click</button> -->
 </div>
 
 </div>

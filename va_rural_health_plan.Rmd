@@ -45,12 +45,28 @@ Column {data-width=200, .sidebar}
 
 ```{js, class.source = "jsvis1"}
 function myFunction(src) { 
+    if (selected_county != "") {
+      src = src + '&' + selected_county;
+    }
+    console.log(src);
     document.getElementById("frame").src = src;
 }
 ```
 
 ```{js}
-window.top.postMessage('reply', '*')
+var selected_county = "";
+
+window.onmessage = function(event){
+    var data = event.data;
+    selected_county = extractCounty(data);
+    console.log(selected_county);
+}
+
+function extractCounty(text) {
+  var rx = /selected_county=[0-9]{5}/g;
+  var arr = rx.exec(text);
+  return arr ? arr[0] : ''; 
+}
 ```
 
 ##### Education
@@ -82,10 +98,15 @@ window.top.postMessage('reply', '*')
 
 Column {data-width=1400}
 -----------------------------------------------------------------------
-<!-- <button type="button" class="view_button" onclick='alert(document.getElementById("frame").contentWindow.location.href)'>click</button> -->
 
-<iframe id="frame" referrerpolicy="origin-when-cross-origin" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=%23789b4a" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px"></iframe>
 
- 
+<iframe id="frame" src="https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=%23789b4a" width="1400" height="1200" frameborder="0" scrolling="yes" data-external="1" style="margin-left:-8px"></iframe>
+
+<hr />
+<script>document.write(document.getElementById("frame"))</script>
+
+<script>document.write(document.getElementById("frame").contentWindow.location.href)</script>
+
+<!-- <button type="button" class="view_button" onclick='alert(document.getElementById("frame").[0].contentWindow.location.search)'>click</button> -->
 
  
