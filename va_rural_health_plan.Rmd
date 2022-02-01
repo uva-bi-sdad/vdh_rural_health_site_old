@@ -5,6 +5,8 @@ output:
     orientation: columns
     vertical_layout: fill
     logo: icon.svg
+    mathjax: null
+    resize_reload: false
 ---
 <style>
 body {
@@ -34,7 +36,6 @@ library(flexdashboard)
 ```
 
 
-
 Column {data-width=200, .sidebar}
 -----------------------------------------------------------------------
 <center>
@@ -60,7 +61,8 @@ function myFunction(src) {
 <button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2019&selected_year=2019&min_year=2010&selected_variable=food_insecurity_and_cost:Child_Food_Insecurity_Rate&variable_type=Nutrition%20and%20Food%20Security&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Rates of Food Insecurity among Households with Children</button>
 
 ##### Healthy Moms and Babies
-<button type="button" class="view_button" onclick="myFunction('')" disabled>Adequacy of Prenatal Care Utilization via Kotelchuck Index</button>
+<button type="button" class="view_button" onclick="myFunction('')" style="opacity: .4;" disabled>Adequacy of Prenatal Care Utilization via Kotelchuck Index</button>
+<div style="margin-top: -50px; margin-bottom: 39px; padding-left: 35px; padding-top:0px; transform: rotate(-30deg); color: olivedrab; opacity: .6;"><b>Coming Soon</b></div>
 
 ##### Access to Health Care Services
 <button type="button" class="view_button" onclick="myFunction('https://uva-bi-sdad.github.io/community_example/?max_year=2021&selected_year=2021&min_year=2015&selected_variable=preventable_hospitalizations:prevent_hosp_rate&variable_type=Health&region_type=urban,mixed,rural&starting_shapes=county&plot_type=scatter&hide_title=true&hide_logo=true&navcolor=#789b4a')">Rates of Avoidable Hospitalizations per 100,000 Residents</button>
